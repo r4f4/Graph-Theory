@@ -1,0 +1,6 @@
+exercicios.*
+exercicios-pics.pdf
+!exercicios.tex
+.*
+!.gitignore
+*~
