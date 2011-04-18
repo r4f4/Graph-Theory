@@ -1,0 +1,24 @@
+\quest{4.1.20}
+
+\partQuest{a}
+($\rightarrow$) Suponha por absurdo que $T_1 \cap T_2 = \emptyset$. Se
+$u \in V(T_1)$ e $v \in V(T_2)$ então não existe caminho de $u$ para $v$ em
+$T_1 \cup T_2$. Mas isso contraria a hipótese de que $T_1 \cup T_2$ é uma
+subárvore de $T$.
+
+\partQuest{b}
+Prova por indução forte em $|T_f| = n$.
+
+Hipótese: Se $T_f$ é uma família de subárvores de uma árvore $T$ com $|T_f| = k$,
+$ 1 \le k \le n$, se quaisquer 2 membros de $T_f$ possuem um vértice em comum,
+então há um vértice de $T$ que pertence a todos os membros de $T_f$.
+
+Passo: Seja $T_f$ uma família de subárvores da árvore $T$ como na hipótese e tal
+que $|T_f| = n + 1$. Sejam $T'$ e $T''$ subárvores de $T_f$ tal que
+$T' \cap T'' \ne \emptyset$. Sabemos de (a) que $T' \cap T''$ é subárvore de $T$.
+Seja $T'_f = T_f - \{T', T''\} \cup \{T' \cap T''\}$ a família obtida por
+substituir $T'$ e $T''$ por sua intersecção em $T_f$. Em $T'$, temos que
+$T_i \cap T_j \ne \emptyset$, $\forall T_i, T_j$. Então, por H.I. existe um
+vértice $v$ de $T$ que pertence a todos os membros de $T'_f$. Em particular, $v$
+pertence a $T' \cap T''$ e, portanto, pertence a $T'$ e $T''$.
+\fimprova
