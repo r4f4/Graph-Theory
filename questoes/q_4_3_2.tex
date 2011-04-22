@@ -1,0 +1,51 @@
+\quest{4.3.2}
+
+\partQuest{a}
+Seja $G$ um grafo qualquer e $T_1$ e $T_2$ duas subárvores geradoras de $G$.
+%
+Seja $e = xy \in T_1\backslash T_2$, considere então $T_1 - e$, e sabemos que como $e$ é uma aresta de corte, geraremos duas componentes conexas $X$ e $Y$, com os vértices alcancáveis a partir de $x$ e $y$, respectivamente (Veja a Figura \ref{graph:componentesT1-e}).
+%
+Como $e \notin T_2$, então $T_2 + e$ contém um ciclo fundamental e, portanto, existe uma aresta $f$ que liga algum $x' \in X$ a um $y' \in Y$.
+
+Basta então mostrar que $T_1' := \{T_1 - e\} + f$, é acíclico e conexo.
+%
+Primeiramente, $T_1'$ é conexo pois existe caminho entre qualquer parte de vértices, $v$ e $v'$, internos em $X$ e $Y$ e, além disto, se $v$ e $v'$ estiverem em conjuntos diferentes ($v \in X$ e $v' \in Y$, sem perda de generalidade), então $\exists vXx'y'Yv'$ um caminho em $T_1'$.
+%
+Alem disto, $T_1'$ é acíclico, pois $T_1 - e$ o é, e se $f$ gerasse um ciclo em $T_1 - e$, então $\exists x'{T_1 - e}y'$ que não usa $f$, o que é uma contradição pois $x' \in X$ e $y' \in Y$ duas componentes conexas distintas em $T_1 - e$.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%
+%                       Delta(G) = #folhas(G)
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure} [htb]
+        \centering
+        \begin{postscript}
+                \TinyPicture\VCDraw{%
+                \begin{VCPicture}{(0,0)(12,12)}
+                        \ChgEdgeArrowStyle{-}
+			%%%%%%%%%%%%%%%%%%%%%%%%%%%% Componentes %%%%%%%%%%%%%%%%%%%%%
+			\FixStateDiameter{6cm} \ChgStateLabelScale{3} 
+			\StateVar[X]{(2,6)}{X} \State[Y]{(10,6)}{X}  
+			\LargeState \RstStateLabelScale 
+                        %%%%%%%%%%%%%%%%%%%%%%%%%%%% vertices %%%%%%%%%%%%%%%%%%%%%%%%%
+                        % Vértices de X
+                        \State[x']{(4,4)}{1} \State[x]{(4,8)}{2}
+                        % Vértices de y
+                        \State[y']{(8,4)}{3} \State[y]{(8,8)}{4}
+                        %%%%%%%%%%%%%%%%%%%%%%%%%%%% Arestas %%%%%%%%%%%%%%%%%%%%%%%%%
+                        % arestas e e f
+                        \ArcR{1}{3}{f} 
+			\ChgEdgeLineStyle{dashed}
+			\ArcL{2}{4}{e}
+                \end{VCPicture}}
+        \end{postscript}
+        \caption {O grafo $T_1 - e$ e as arestas $e$ e $f$.}
+        \label{graph:}
+\end{figure}
+\fimprova
+
+\partQuest{b} É exatamente a questão anterior, invertendo $f$ por $e$.
+\fimprova
+

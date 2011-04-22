@@ -1,0 +1,70 @@
+\quest{4.1.1}
+
+\partQuest{a} {\bf Sol 1)} Provaremos primeiro um resultado mais genérico.
+%
+Seja $F$ uma floresta com $\Delta(F) = k$, então $F$ tem pelo menos $k$ folhas (Denote por $\# folhas(G)$ o número de folhas na árvore $G$). A prova será por indução forte em $e(F)$.
+
+Se $e(F) = 0$, então o resultado segue trivialmente pois $\# folhas(F) \ge 0$.
+%
+Caso contrário, seja $P = v_1v_2v_3\ldots v_k$ um caminho maximal em $F$ com $k \ge 2$ (Podemos escolher isto, já que $E(F) \ne \varnothing$).
+%
+Sabemos então, que $v_1$ e $v_k$ são folhas em $F$, senão ou $P$ não seria maximal ou haviria um ciclo em $F$.
+%
+Considere então $F' := (V(F),E(F)-E(P))$, que é uma floresta (não contém ciclos), com $e(F') < e(F)$, duas folhas a menos ($v_1$ e $v_k$) e $\Delta(F') \ge \Delta(F) - 2$, pois $\forall v\in V(F)\quad d_F(v) \ge d_{F'}(v) - 2$, já que removemos as arestas de um caminho.
+%
+Por hipótese de indução, temos que $\# folhas(F') \ge \Delta(F')$.
+%
+Logo, temos o seguinte: 
+\begin{eqnarray}
+	\#folhas(F) &=& \# folhas(F') + 2  \nonumber \\
+		  &\ge& \Delta(F') + 2 	   \nonumber \\
+		  &\ge& \Delta(F) - 2 + 2  \nonumber \\
+		    &=& \Delta(F) \nonumber
+\end{eqnarray}
+\fimprova
+
+Como corolário deste resultado temos a resposta da questão, para o caso em que $F$ é conexa.\\
+
+\partQuest{b} Um conjunto ${\cal P} = \{P_1, P_2, \ldots, P_k\}$, onde $P_i$, $1 \le i \le k$, é um caminho. Além disto, os caminhos são disjuntos nos vértices, exceto pelo vertice inicial $x$, que é comum a todos.
+%
+Por exemplo ${\cal P} = \{ xv_1v_2v_3, xz_1z_2z_3z_4, xq_1q_2\}$, que pode ser visto na Figura \ref{graph:estrelaGrande}.
+%
+Neste caso, temos $d(x) = k$, $d(y) = 2$ (quando $y$ não está no final de algum caminho) e $d(s) = 1$ para os últimos vértices de cada caminho.
+%
+Além disto, temos $k$ folhas (uma de cada caminho).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%
+%                       Delta(G) = #folhas(G)
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure} [htb]
+        \centering
+        \begin{postscript}
+                \TinyPicture\VCDraw{%
+                \begin{VCPicture}{(0,0)(12,12)}
+                        \ChgEdgeArrowStyle{-}
+                        %%%%%%%%%%%%%%%%%%%%%%%%%%%% vertices %%%%%%%%%%%%%%%%%%%%%%%%%
+                        % Vértice em comum
+                        \State[x]{(6,6)}{1}
+			% Caminho v
+			\State[v_1]{(8,6)}{2} \State[v_2]{(10,6)}{3} \State[v_3]{(12,6)}{4}
+                        % Caminho q
+                        \State[q_1]{(4,4)}{5} \State[q_2]{(2,2)}{6}
+			% Caminho z
+			\State[z_1]{(4,8)}{7} \State[z_2]{(2,10)}{8} \State[z_3]{(0,12)}{9}
+                        %%%%%%%%%%%%%%%%%%%%%%%%%%%% Arestas %%%%%%%%%%%%%%%%%%%%%%%%%
+			% caminho v
+                        \EdgeL{1}{2}{} \EdgeL{2}{3}{} \EdgeL{3}{4}{}
+			% caminho q
+                        \EdgeL{1}{5}{} \EdgeL{5}{6}{}
+			% caminho z
+                        \EdgeL{1}{7}{} \EdgeR{7}{8}{} \EdgeL{8}{9}{}
+                \end{VCPicture}}
+        \end{postscript}
+        \caption {Grafo $G$ com $\Delta(G) = \#folhas(G)$.}
+	\label{graph:estrelaGrande}
+\end{figure}
+
+

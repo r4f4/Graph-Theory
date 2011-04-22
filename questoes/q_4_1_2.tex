@@ -1,0 +1,28 @@
+\quest{4.1.2}
+
+Vamos provar que a) $\leftrightarrow$ c) e b) $\leftrightarrow$ c).
+
+\partQuest{a}
+
+\partQuest{b}
+($\Rightarrow$) Seja $G$ uma floresta com $n-1$ arestas.
+%
+Como florestas são acíclicas, basta mostrar que $c(G) = 1$ e teremos então uma árvore. 
+%
+Considere então ${\cal C} = \{c_1, c_2, \ldots, c_k\}$ as componentes conexas de $G$.
+%
+Cada componente $c_i$ é um grafo conexo, acíclico e com $e(C_i) = v(c_i) - 1$, pois é uma árvore ({\bf Teorema 4.3}).
+%
+Desta forma, a quantidade de arestas em $G$ é dada por:
+\begin{eqnarray}
+	e(G) &=& \sum_{c_i \in {\cal C}} e(c_i)      \nonumber \\
+	     &=& \sum_{c_i \in {\cal C}} v(c_i) - 1  \nonumber \\
+	     &=& \sum_{c_i \in {\cal C}} v(c_i) - \sum_{c_i \in {\cal C}} 1 \nonumber \\
+	     &=& n - k \label{eq:componentes}
+\end{eqnarray}
+
+Logo, como temos $n-1$ arestas em $G$, então $k = 1$, com o conjunto $|{\cal C}| = 1$ e, portanto, $G$ uma árvore.
+
+($\Leftarrow$) Seja $G$ uma árvore, então, por definição $G$ é floresta. Além disto, $c(G) = 1$ e, utilizando a equação \ref{eq:componentes}, temos que $e(G) = n - 1$ e o resultado segue.
+\fimprova
+

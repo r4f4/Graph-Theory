@@ -1,0 +1,26 @@
+\quest{4.3.10}
+
+\partQuest{a} Seja $G$ um grafo qualquer e $T_1$ e $T_2$ árvores geradoras de $G$ disjuntas. Vamos construir uma família de ciclos para depois utilizarmos o corolário {\bf 2.16} e mostrar que existe um subgrafo gerador par de $G$, logo, euleriano.
+
+Considere $\overline{T_1}$, a {\it cotree} de $T_1$.
+%
+Seja ${\cal C} = \{c_e:$ um ciclo fundamental com $e \in \overline{T_1}\}$ uma família de cíclos.
+%
+Note que como $T_2 \subseteq \overline{T_1}$, então $\forall v \in V(G)\quad \exists c_e \in {\cal C}$, tal que $v \in c_e$, em especial quando $e = vx$, para algum $x \in V(G)$.
+
+Portanto, o grafo $H_1 = \bigtriangleup {\cal C}$ é gerador e, pelo corolário {\bf 2.16}, é também um grafo par.
+%
+Logo, pelo Teorema {\bf 3.5} $G$ é euleriano.
+\fimprova
+
+\partQuest{b} Considere o grafo $H_1$ como gerado na letra {\bf a)} e, de forma semelhante, o grafo $H_2$ baseado em $T_2$ e $\overline{T_2}$.
+%
+Pelo que foi demonstrado em {\bf a)} temos que $H_1$ e $H_2$ são subgrafos pares geradores de $G$.%
+Além disto, pelo Teorema {\bf 4.10} temos que $H_i \cap \overline{T_i} = \overline{T_i}$, $i = 1,2$, logo $\overline{T_i} \in H_i$.
+%
+Note também que $T_2 \subseteq \overline{T_1}$ e $T_1 \subseteq \overline{T_2}$, portanto: 
+\begin{eqnarray}
+	H_1 \cap H_2 &=& \overline{T_1} \cup \{H_1 - \overline{T_1}\} \cup \overline{T_2} \cup \{H_2 - \overline{T_2}\} \nonumber \\
+		     &=& G \nonumber
+\end{eqnarray}
+\fimprova

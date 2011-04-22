@@ -1,0 +1,35 @@
+\quest{4.2.3}
+\partQuest{a}
+Vou mostrar como construir a {\it distance Tree} $T$ e depois demonstrarei que $\forall v \in V(G)\quad d_T(x,v) = d_G(x,v)$
+
+Considere inicialmente $T:=({x},\varnothing)$, uma árvore que será aumentada a cada passo do processo. Seja  $V' = \{v: v \in V(G) - V(T)$ e $uv \in \partial(V(T))\}$.
+%
+Faça $T' := (V(T)\cup V', E(T)\cup E')$,  onde $E' \subseteq \partial(V(T))$ é o conjunto das arestas com extremos não repetidos em $V(G) - V(T)$ (Se $k$ arestas tem o mesmo extremo em $V(G) - V(T)$, escolha qualquer uma delas para fazer parte de $E'$).
+%
+Então, repita o processo com $T'$ enquanto $V(T') \ne V(G)$.
+
+A cada passo inserimos, pelo menos, um vértice e uma aresta em $T$, pois $\partial(V) \ne \varnothing$ para todo $V \subset V(G)$ pois $V$ é conexo.
+%
+Portanto, eventualmente, o processo alcança $V(T) = V(G)$, logo o subgrafo $T$ de $G$ é gerador e, além disto, é uma árvore pois é conexo (pela forma como foi construído) e acíclico, pois as arestas inseridas em $T$ não geram ciclos, pois criam o primeiro e único caminho entre $u$ e $x$, onde $u \in V(T)$ e $v \in V(G)-V(T)$.
+
+Mostrarei agora que $\forall v \in V(G)\quad d_T(x,v) = d_G(x,v)$. A prova será por indução fraca em $d_G(x,v)$.
+%
+Na base, considere que $d_G(x,v) = 1$, logo, pela forma com que $T$ é construída, temos que na primeira iteração do processo $T=({x},\varnothing)$, e $v\in V'$ pois ${x,v} \in \partial(\{x\})$.
+%
+Logo, pelo menos uma aresta incidente em $v$ será adicionada a $T$ e, portanto $d_T(x,v) = 1$.
+%
+Como Hipótese de Indução, tenho que se $d_G(x,v) = k$ então $d_T(x,v)$.
+%
+No passo, considere $v' \in V(G)$, onde, $d_G(x,v') = k + 1$.
+%
+Seja então $P_i = xv_{1i}v_{2i}\ldots v_{ji}v'$ caminhos de $x$ a $v'$ em $G$ com comprimento $k + 1$. 
+%
+Sabemos que $d_G(x,v_{ji}) = k$ $\forall i$, senão haveria um caminho menor que todos os caminhos $P_i$ de $x$ a $v'$.
+%
+Logo, por Hipótese de Indução, temos que $d_T(x,v_{ji}) = k$ e portanto, uma das arestas ${v_{ji},v'}$ será adicionada a $T$ em algum passo do processo descrito acima.
+%
+Portanto, $d_T(x,v') = d_T(x,v_{ji}) + 1 = k + 1$.
+\fimprova
+
+\partQuest{b}
+

@@ -1,0 +1,42 @@
+\quest{4.2.9}
+
+\partQuest{a}
+($\Leftarrow$) Primeiramente vou mostrar como construir o {\it spanning x-branching} $S$ de $D$ para o $x \in V(D)$ como dado na hipótese.
+%
+Considere inicialmente $S := (\{x\}, \varnothing)$.
+%
+Enquanto $V(D)-V(S) \ne \varnothing$ repita o seguinte procedimento.
+%
+Como $V(D)-V(S) \ne \varnothing$, então existe, no mínimo, um arco $(v,v')$, onde $v \in V(D)$ e $v' \in V(S)$, pois $\partial^+(S) \ne \varnothing$.
+%
+Seja $V' = \{v: (u,v) \in \partial^+(S)$ e $E' \subseteq \partial^+(S)$ um subconjunto com apenas um arco incidindo em cada vértice (se mais de um arco incide em $z \in V(D)-V(S)$, remova uma delas).
+%
+Atualize $S := (V(S)\cup V', A(S) \cup E')$.
+
+Basta-nos demonstrar que $S$ gerado é um {\it spanning x-branching}.
+%
+É gerador pois, a cada iteração incorpora, no mínimo, um vértice $v \in V(D)-V(S)$ e $V(D)$ é finito.
+%
+É {\it x-branching} pois $d^-(v) = 0$, pois $v$ nunca é adicionado novamente ao grafo $S$, logo $\nexists (.,x) \in A(S)$.
+%
+Além disto, $d^-(v) = 1$, $v\ne x$, pois a partir do momento em que um vértice $v$ é adicionado ao conjunto $V(S)$, ele nunca mais o será, pois não pertencerá a $V(D)-V(S)$.
+
+($\Rightarrow$) Seja $S$ um {\it spanning x-branching} de $D$.
+%
+Seja $X \subset V(D)$, onde $x \in X$. Como $S$ é {\it spanning x-branching}, temos que $d^-(v) = 1$, $\forall v \in V(D)-X$ e, por definição, não há ciclos em $S$.
+%
+Logo, seja $P = v_1v_2\ldots v_k$ um caminho maximal em $V(D) - X$. Sabemos que $d^-(v_1) = 1$ e este arco incidente não pode ter cauda em $V(D) - X$ senão $P$ não seria maximal, ou existiria um ciclo em $S$ e em ambos os casos teríamos um absurdo.
+%
+Logo, $\exists (v',v_1) \in A(S)$, onde $v' \in X$, logo $|\partial^+(X)| \ge 1$, e, portanto, $\partial^+(X) \ne \varnothing$.
+\fimprova
+
+\partQuest{b} ($\Leftarrow$) Seja $D$ um digrafo para o qual existe um {\it spanning v-branching} $\forall v \in V(D)$.
+%
+Considere $x,y \in V(D)$, então num {\it spanning x-branching} existe um caminho orientado de $x$ para $y$, analogamente, num {\it spanning y-branching} há um caminho orientado de $y$ para $x$.
+%
+Desta forma, $D$ é fortemente conexo.
+
+($\Rightarrow$) Seja $D$ um digrafo fortemente conexo.
+%
+Seja $x \in V(D)$ um vértice qualquer, temos que $\forall X \subset V(D)$, onde $x \in X$, existe um caminho de $x$ para $y \in V(D) - X$. Logo, $\partial^+(X) \ne \varnothing$ e, portanto, pela letra {\bf a)} temos que existe um {\it spanning x-branching} em $D$.
+

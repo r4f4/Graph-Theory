@@ -1,0 +1,20 @@
+\quest{4.1.6}
+
+Seja $x \in V(D)$ e $X=\{v: v \in v(D)$ e $\exists xDv\}$.
+%
+Considere então o subgrafo induzido $D'$ pelos vértices em $X$ ($D' := D[X]$).
+%
+Remova todos os arcos com cabeça em $x$, pois queremos um $x$-{\it branching}.
+%
+Todos os vértices ainda permanecem alcançáveis, pois estes arcos não estavam em nenhum caminho orientado entre $x$ e $v$, $v \in V(D')$ (estavam em passeios orientados).
+%
+Se $\forall v \in V(D')\quad d^-(v) = 1$, então já temos um $x$-{\it branching}.
+%
+Caso contrário, seja $v \in V(D')$, onde $d^-(v) > 1$, então remova um dos arcos com cabeça em $v$.
+%
+Neste caso, $v$ ainda será alcançável a partir de $x$, pois ainda há um caminho $xD'v$ utilizando um dos arcos $(v',v)$ restantes, pois $\exists xD'v'$.
+%
+Desta forma, remover um arco de vértices $v$, onde $d^-(v) > 1$, preserva a existência de caminho entre $x$ e $v$.
+%
+Portanto, repetindo este processo, eventualmente obteremos um $x$-{\it branching}, já que $e(D')$ é finito.
+\fimprova

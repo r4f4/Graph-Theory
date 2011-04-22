@@ -1,10 +1,28 @@
 \quest{4.1.20}
 
 \partQuest{a}
-($\rightarrow$) Suponha por absurdo que $T_1 \cap T_2 = \emptyset$. Se
-$u \in V(T_1)$ e $v \in V(T_2)$ então não existe caminho de $u$ para $v$ em
-$T_1 \cup T_2$. Mas isso contraria a hipótese de que $T_1 \cup T_2$ é uma
-subárvore de $T$.
+($\Rightarrow$) Suponha por absurdo que $T_1 \cap T_2 = \varnothing$.
+%
+Se $u \in V(T_1)$ e $v \in V(T_2)$ então não existe caminho de $u$ para $v$ em $T_1 \cup T_2$, pois não há vertices em comum entre $T_1$ e $T_2$.
+%
+Mas isso contraria a hipótese de que $T_1 \cup T_2$ é uma subárvore de $T$.
+%
+Logo, $T_1 \cap T_2 \ne \varnothing$.
+
+($\Leftarrow$) Seja $T_1$ e $T_2$ subárvores de $T$, tal que $T_1 \cap T_2 \ne \varnothing$. 
+%
+Obviamente $T_1 \cap T_2$ é acíclico, pois senão ambas árvores teriam ciclos e, além disto, $T_1 \cap T_2$ é conexo, pois se $u,v \in V(T_1 \cap T_2)$, então $u,v \in V(T_1)$ e, por definição $\exists uT_1v$.
+%
+Temos também que $T_1 \cup T_2$ é um grafo acíclico, senão $T$ conteria um ciclo, o que é um absurdo pois $T$ é árvore.
+%
+Resta-nos mostrar que $T_1 \cup T_2$ é conexo, e,  para tanto, considere $u,v \in V(T_1 \cup T_2)$.
+%
+Se $u,v \in V(T_1)$ ou $u,v \in V(T_2)$, temos, por definição, que existe caminho entre $u$ e $v$.
+%
+Sem perda de generalidade, considere que $u \in V(T_1)$ e $v \in V(T_2)$.
+%
+Seja $y \in T_1 \cap T_2$, então $\exists uT_1y$ e $\exists yT_2v$, logo, $\exists uT_1yT_2v$ em $T_1 \cup T_2$.
+\fimprova
 
 \partQuest{b}
 Prova por indução forte em $|T_f| = n$.
