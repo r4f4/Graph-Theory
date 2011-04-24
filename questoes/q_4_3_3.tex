@@ -1,0 +1,18 @@
+\quest{4.3.3}
+(a) $\Leftrightarrow$ (b) Se $S$ é árvore geradora, pela definição de que árvore
+é um grafo acíclico conexo, $S$ não contém ciclos. Para ver que $S$ é maximal com
+respeito a não ter ciclos, sejam $u,v \in V$ vértices não adjacentes em $S$. Como
+$S$ é conexo, existe um caminho $uSv$ de $u$ para $v$ em $S$. Ao adicionar a aresta
+$uv \in E$ a $S$ obtemos o ciclo $C:= uSvu$. Portanto, não existe árvore geradora
+$S'$ com mais arestas que $S$ e que contenha $S$. Em contrapartida, se $S$ não
+contém ciclos e é maximal, então $S$ é conexo, pois se existem dois vértices $u$
+e $v$ entre os quais não há um caminho em $S$, adicionar a aresta $uv \in E$ gera
+$S'$ acíclico com mais arestas que $S$, o que é absurdo.
+
+(a) $\Leftrightarrow$ (c) Porque $S$ é conexa e geradora, todo corte de arestas
+não vazio de $G$ contém pelo menos uma aresta de $S$. Se removermos uma aresta
+qualquer, $S$ será disconexa e não encontrará o \emph{bond} de $G$ que contém a
+aresta removida. Reciprocamente, se $S$ encontra todo \emph{bond} de $G$, então
+$S$ é conexo e como é minimal com respeito a essa propriedade, $S$ não contém
+ciclos. Portanto, $S$ é árvore geradora.
+

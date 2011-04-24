@@ -1,0 +1,11 @@
+\quest{4.1.4}
+Sejam $G$ e $F$ como na hipótese. Porque $F$ é uma floresta maximal, $F$ induz
+uma subárvore geradora em cada componente de $G$. Sejam $C_1,C_2,\cdots,C_{c(G)}$
+as componentes de $G$ e $F_1,F_2,\cdots,F_{c(G)}$ as subárvores geradoras de cada
+componente. Para cada $F_i$, vale $e(F_i) = v(C_i) - 1$, $1 \le i \le c(G)$.
+Somando para todo $F_i$ temos que
+\[
+    e(F) = \sum^{c(G)}_{i=1} e(F_i) = \sum^{c(G)}_{i=1} (v(C_i) - 1) = \sum^{c(G)}_{i=1} v(C_i) - c(G) = v(G) - c(G).
+\]
+\fimprova
+

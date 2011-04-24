@@ -1,0 +1,44 @@
+\quest{4.1.8}
+
+\partQuest{a} Sejam $T$ e $T'$ como na hipótese, $D(v) = \max\{d(v,u) \, : u \in V\}$
+tal que $D(v)$ é mínimo e $C = \{v_1, v_2, \cdots, v_k\}$ os centros de $T$.
+
+\begin{fact}
+\label{fact:folhadist}
+Se $D(v) = d(v, f)$ então $f$ é folha.
+\end{fact}
+
+\begin{proof} Suponha por absurdo $D(v)$ como na hipótese mas que $f$ não seja
+folha. Porque $f$ não é folha, $f$ possui um vizinho $u \ne v$. Nesse caso,
+$D'(v) = d(v, f) + 1 > D(v)$, o que é um absurdo.
+\end{proof}
+
+\begin{fact}
+\label{fact:contained}
+Em $T'$, $D_{T'}(u) = D_T(u) - 1$, $\forall u \in V(T')$.
+\end{fact}
+
+\begin{proof} Direta do Fato \ref{fact:folhadist} e da forma como $T'$ é obtida.
+\end{proof}
+
+Seja $C' = \{v'_1, v'_2, \cdots, v'_l\}$ os centros de $T'$. Do Fato
+\ref{fact:contained}, obtemos que $C \subseteq C'$. Suponha agora por absurdo que
+$\exists v'_i \in C' \setminus C$ tal que $D_{T'}(v'_i) \le D_{T'}(v)$, $v \in C$.
+Então sabemos do Fato \ref{fact:contained} que
+\begin{equation}
+\label{eq:part1}
+D_{T'}(v'_i) \le D_{T'}(v) = D_T(v) - 1
+\end{equation}
+
+Além do mais, sabemos que
+\begin{equation}
+\label{eq:part2}
+D_{T'}(v'_i) \le D_T(v'_i) \le D_{T'}(v'_i) + 1
+\end{equation}
+
+Finalmente, temos de \eqref{eq:part1} e \eqref{eq:part2} que
+\[D_T(v'_i) = D_{T'}(v'_i) + 1 \le D_T(v),\] o que é um absurdo pois nesse caso
+$v'_i$ seria centro em $T$.
+
+\partQuest{b}
+

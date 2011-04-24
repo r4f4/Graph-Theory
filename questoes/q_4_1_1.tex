@@ -25,6 +25,16 @@ Logo, temos o seguinte:
 
 Como corolário deste resultado temos a resposta da questão, para o caso em que $F$ é conexa.\\
 
+{\bf Sol 2)} Suponha por absurdo que $T$ seja uma árvore com grau máximo $k$ e
+menos que $k$ folhas. Seja $F$ o conjunto das folhas de $T$. Porque $F$ é um
+conjunto de folhas, $\partial(F) \le k - 1$. Seja $v$ o vértice tal que
+$d(v) = k$. Seja ${\cal P}$  o conjunto de caminhos de $v$ a cada uma das folhas
+de $F$. $|{\cal P}| \le k - 1$ pois $v$ pode ter no máximo $k-1$ caminhos usando
+arestas incidentes distintas. Seja $e$ a aresta não usada por nenhum caminho em
+${\cal P}$ e $u$ o vértice sobre o qual $e$ incide. Sabemos que $u$ não é folha,
+pois caso contrário $e$ estaria em ${\cal P}$. Seja $P_{uf}$ o caminho de $u$ até
+uma folha $f \in F$. Então $P:=vuP_{uf}P_{fv}$ é um ciclo em $T$, o que é absurdo.\\
+
 \partQuest{b} Um conjunto ${\cal P} = \{P_1, P_2, \ldots, P_k\}$, onde $P_i$, $1 \le i \le k$, é um caminho. Além disto, os caminhos são disjuntos nos vértices, exceto pelo vertice inicial $x$, que é comum a todos.
 %
 Por exemplo ${\cal P} = \{ xv_1v_2v_3, xz_1z_2z_3z_4, xq_1q_2\}$, que pode ser visto na Figura \ref{graph:estrelaGrande}.
@@ -66,5 +76,4 @@ Além disto, temos $k$ folhas (uma de cada caminho).
         \caption {Grafo $G$ com $\Delta(G) = \#folhas(G)$.}
 	\label{graph:estrelaGrande}
 \end{figure}
-
 
