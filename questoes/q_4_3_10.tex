@@ -20,7 +20,20 @@ Além disto, pelo Teorema {\bf 4.10} temos que $H_i \cap \overline{T_i} = \overl
 %
 Note também que $T_2 \subseteq \overline{T_1}$ e $T_1 \subseteq \overline{T_2}$, portanto: 
 \begin{eqnarray}
-	H_1 \cap H_2 &=& \overline{T_1} \cup \{H_1 - \overline{T_1}\} \cup \overline{T_2} \cup \{H_2 - \overline{T_2}\} \nonumber \\
+	H_1 \cup H_2 &=& \overline{T_1} \cup \{H_1 - \overline{T_1}\} \cup \overline{T_2} \cup \{H_2 - \overline{T_2}\} \nonumber \\
 		     &=& G \nonumber
 \end{eqnarray}
 \fimprova
+
+\noindent{\bf SOLUÇÃO ALTERNATIVA ??? (Muito mais simples)}
+
+\partQuest{a} Pelo Corolário {\bf 4.12}, temos que $\overline {T_1}$ está contida em um subgrafo par $H_1$ de $G$.
+%
+Logo, $H_1' = (V(G), E(H_1))$ é um subgrafo gerador par de $G$.
+\fimprova
+
+\partQuest{b} Ainda pelo Corolário {\bf 4.12}, podemos criar $H_1$ e $H_2$ subgrafos pares de $G$.
+%
+Como $E(T_1) \subseteq E(\overline{T_2}) \subseteq E(H_2)$, temos que $E(H_1) \cup E(H_2) = E(G)$, e portanto, uma cobertura de $G$.
+\fimprova
+
