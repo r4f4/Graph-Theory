@@ -1,0 +1,22 @@
+\quest{5.2.5}
+
+\partQuest{b}
+{\bf Sol 1)} $(\Leftarrow)$ Seja $G$ um grafo e $B = \{B_1, \dotsc, B_k\}$ sua
+decomposição em blocos tal que cada bloco é bipartido. Seja $(X_i, Y_i)$ a
+bipartição do bloco $B_i$. Sabemos que não podem haver arestas entre dois
+blocos pois, pela Proposição 5.3c, eles têm no máximo um vértice em comum.
+Considere dois blocos $B_i$ e $B_j$. Se $(X_i,Y_i)$ é bipartição de $B_i$, sem
+perda de generalidade suponha que o vértice $v$ comum a $B_i$ e $B_j$ pertença
+a $X_i$. Na bipartição de $B_j$, chamaremos de $X_j$ a partição que contém $v$.
+Se $v$ não existe, escolha uma partição qualquer como $X_j$. Então, $(X_i \cup
+X_j, Y_i \cup Y_j)$ é bipartição de $B_i \cup B_j$. Por que os blocos formam
+uma decomposição de $G$, $(\bigcup_{i=1}^{|B|} X_i, \bigcup_{i=1}^{|B|} Y_i)$ é
+bipartição de $G$.
+
+$(\Rightarrow)$ Seja $G$ um grafo bipartido e suponha que sua decomposição em
+blocos seja tal que existe um bloco $B$ que não é bipartido. Pela Proposição
+5.3c sabemos que todo ciclo de $G$ está contido em um bloco. Além disso, pelo
+Teorema 4.7, $B$ contém um ciclo ímpar. Mas nesse caso, $G$ também possui um
+ciclo ímpar, o que contraria a hipótese de que $G$ é bipartido pelo Teorema
+4.7.
+

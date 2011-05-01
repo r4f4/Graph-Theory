@@ -1,0 +1,19 @@
+\quest{5.1.4}
+
+Se $X \cap Y \ne \varnothing$, todo vértice $v \in X \cap Y$ é um $(X,Y)$-path
+de tamanho $0$ em $G$. Portanto, se $|X \cap Y| \ge 2$, o resultado segue. Se
+$X \cap Y = \{v\}$, sabemos que $\exists x \in X$ e $\exists y \in Y$ e que,
+porque $G$ não possui vértice de corte, existe um caminho $P$ que não passa por
+$v$ entre $x$ e $y$. Se $x'$ é o último vértice de $X$ em $P$ e $y'$ o
+primeiro, os caminhos $v$ e $x'Py'$ são $(X,Y)$-paths em $G$.
+
+Suponha agora $X \cap Y = \varnothing$. Sejam $x, x' \in X$, $x \ne x'$, e
+$y, y' \in Y$, $y \ne y'$, e $P_1, P_2$ e $P'_1, P'_2$ os caminhos internamente
+disjuntos entre $x$ e $y$ e $x'$ e $y'$, respectivamente. Mostraremos como
+construir dois caminhos disjuntos entre $X$ e $Y$. Seja $s \not \in X \cup Y$ o
+primeiro vértice no qual os caminhos $P_1$ e $P'_1$ se interceptam. Considere o
+caminho $P^1 = xP_1sP'_1y$ e seja $P = x''P_1sP'_1y''$ o caminho tal que $x''$
+é o último vértice de $X$ em $P_1$ e $y''$ o primeiro em $Y$. Do mesmo modo,
+seja $P' = x'''P'_2y'''$ o caminho tal que $x'''$ é o último vértice de $X$ em
+$P'_2$ e $y'''$ o primeiro. Então, $P$ e $P'$ são dois $(X,Y)$-paths disjuntos.
+
