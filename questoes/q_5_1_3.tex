@@ -1,0 +1,48 @@
+\quest{5.1.3}
+
+Para mostrar que $H$ não possui vértices de corte, basta mostrar que há dois
+caminhos disjuntos entre qualquer par de seus vértices. Como isto já é válido
+em $G$ e a inclusão de um vértice $v$ não altera isso, temos que basta provar
+que $\exists P, P'$, onde $vPx,vP'x \in H$, $\forall x \in V(G)$ e que, além
+disso $P \cap P' = \varnothing$.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%
+%                       Delta(G) = #folhas(G)
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure} [htb]
+        \centering
+        \begin{postscript}
+                \TinyPicture\VCDraw{%
+                \begin{VCPicture}{(0,0)(12,12)}
+                        \ChgEdgeArrowStyle{-}
+			%%%%%%%%%%%%%%%%%%%%%%%%%%%% Componentes %%%%%%%%%%%%%%%%%%%%%
+			\FixStateDiameter{7cm} \ChgStateLabelScale{3} 
+			\StateVar[G]{(2,6)}{G}
+			\LargeState \RstStateLabelScale 
+                        %%%%%%%%%%%%%%%%%%%%%%%%%%%% vertices %%%%%%%%%%%%%%%%%%%%%%%%%
+                        % Vértice v
+                        \State[v]{(8,6)}{1}
+			\State[a]{(4,7.5)}{2}
+			\State[b]{(4,4.5)}{3}
+                        %%%%%%%%%%%%%%%%%%%%%%%%%%%% Arestas %%%%%%%%%%%%%%%%%%%%%%%%%
+                        % arestas e e f
+                        \ArcR{1}{2}{e} 
+			\ArcL{1}{3}{e'}
+                \end{VCPicture}}
+        \end{postscript}
+        \caption {O grafo $H$.}
+        \label{graph:HGe}
+\end{figure}
+\fimprova
+
+Seja $x \in V(G)$, denote por $P$ e $P'$ dois caminhos disjuntos de $a$ a $x$ 
+e ,$C$ e $C'$, dois caminhos disjuntos de $x$ a $b$. Seja $z$ o primeiro vértice
+de $\{P \cup P'\} \cap C$. Sem perdade de generalidade $z \in P$, logo $vaPzCx$ é um
+caminho entre $v$ e $x$, disjunto de $vbC'x$, devido a forma de escolha de $z$,
+que garante que $bC' \cap aPzCx = \varnothing$.
+\fimprova
+

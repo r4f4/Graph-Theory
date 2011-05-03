@@ -7,10 +7,32 @@ contido em $B$. Mas nesse caso, $P \cup P'$ contém um ciclo em $G$ que não est
 contido em um único bloco, o que é absurdo pela Proposição 5.3c.
 
 \partQuest{b}
-$(\Leftarrow)$ Seja $T$ um subgrafo gerador e $T \cap B$ uma árvore geradora de
-$B$. Como todo ciclo de $G$ deve estar contido em um bloco e $T \cap B$ é
-acíclico, para todo bloco $B$, então $T$ também é acíclico. Vamos mostrar que
-$T$ também é conexo. Porque $T \cap B$ é árvore geradora, $\exists!P_{u,v}$,
-$\forall u,v \in V(B)$ tal que $P$ está contido em $G$ conforme a). Resta
-mostrar que $T$ é conexo. Seja $B(G)$ a \emph{block tree} de $G$. % FIXME
+$(\Rightarrow)$ Seja $T$ uma árvore geradora de $G$, e seja $B$ um bloco de $G$
+e $T_B = T \cap B$. Note que $\forall u,v \ in V(B) \exists! u,v$-caminho em $T$.
+Pela letra ({\bf a}) temos que este $u,v$-caminho está totalmente contido em $B$,
+logo, também está contido em $T_B$. Além disso, $T_B$ é acíclico pois $T$ também
+o é. Portanto, $T_B$ é conexo, acíclico e $V(T_B) = V(B)$, logo, árvore geradora
+de $B$.
+
+$(\Leftarrow)$  A prova será por indução forte no número de blocos de $G$ 
+($b(G)$). Se $b(G) = 1$, o resultado segue trivialmente. Caso $b(G) > 1$, então
+sabemos que $G$ é separável. Seja $v \in V(G)$ um vértice separador de $G$ e
+denote por $G'$ e $G''$ os dois blocos gerados pela separação de $G$ em $v$.
+Temos que $b(G'),b(G'') < b(G)$, logo, podemos usar a hipótese de indução em 
+$G'$ e $G''$. Denote por $\beta'$ o conjunto de blocos de $G'$, $\beta''$ o 
+conjunto de blocos de $G''$ e $t(B)$ uma árvore geradora de um bloco $B$. 
+Desta forma, seja $T' = \bigcup_{B_i \in \beta'} t(B_i)$ (a união
+das árvores geradoras de $G'$) e $T'' = \bigcup_{B_i \in \beta''} t(B_i)$ (análogo
+a $T'$). Note que $T'$ e $T''$ possuem o vértice $v$ em comum e ambos são
+acíclicos e conexos, portanto, $T' \cup T'' = \bigcup_{B_i \in \beta' \cup \beta''} t(B_i)$
+ é acíclico, conexo e é gerador para $G$, logo, uma árvore geradora de $G$.
+\fimprova
+
+
+%$(\Leftarrow)$ Seja $T$ um subgrafo gerador e $T \cap B$ uma árvore geradora de
+%$B$. Como todo ciclo de $G$ deve estar contido em um bloco e $T \cap B$ é
+%acíclico, para todo bloco $B$, então $T$ também é acíclico. Vamos mostrar que
+%$T$ também é conexo. Porque $T \cap B$ é árvore geradora, $\exists!P_{u,v}$,
+%$\forall u,v \in V(B)$ tal que $P$ está contido em $G$ conforme a). Resta
+%mostrar que $T$ é conexo. Seja $B(G)$ a \emph{block tree} de $G$. % FIXME
 

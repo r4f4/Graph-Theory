@@ -1,8 +1,18 @@
 \quest{5.1.2}
 
+\noindent{\bf Versão 1)}
+
 Suponha por absurdo que $e = uv$ seja uma aresta de corte mas que nem $u$ nem
 $v$ sejam vértices de corte de $G$. Isso significa que a remoção de $u$ ou $v$
 não desconecta o grafo, o que implica que a remoção de $e$ também não
 desconecta $G$, pois $G$ possui pelo menos 3 vértices. Mas isso contraria a
 hipótese de que $e$ é aresta de corte.
 
+\noindent{\bf Versão 2)}
+
+Seja $e = xy$, sabemos que $G- e$ possui duas partições $X$ e $Y$, onde 
+$x \in X$ e $y \in Y$, e, além disso, $|X|>1$ ou $|Y|>1$. Sem perda de
+generalidade, suponha que $|X|>1$, então o grafo $G-v$ não é conexo, pois
+$e$ foi removida de $G$, logo $\nexists x'\{G-x\}y \in G-x$, onde $x'\in X$ 
+e $y \in Y$. Logo, $x$ é vértice de corte.
+\fimprova

@@ -1,0 +1,16 @@
+\quest{5.1.1}
+
+Primeiramente, podemos assumir que $G$ não tem loops, pois a remoção destes 
+preserva o caminho entre qualquer par de vértices $v,v' \in V(G)$. Então seja 
+$P = v_1,\ldots ,v_k$ um caminho maximal em $G$. Se $d(v_i) = 1$, $i \in \{1,k\}$, 
+então este não é vértice de corte, pois não é vértice interno a nennhum caminho 
+em $G$, e portanto sua remoção não aumenta o número de componentes de $G$. 
+Caso contrário, temos que ou $d(v_1) > 1$ ou $d(v_k) > 1$ e, como assumimos que
+$G$ não possui loops, sabemos que há arestas saindo de $v_1$ ou $v_k$ para
+vértices de $P$. Para $v_1$, seja $v_i$, onde $\{v_1,v_i\} \in E(G)$, $G - v_1$
+ainda possui caminhos entre todos os vértices, pois se $P' = xGv'v_1v''Gy$ era um 
+caminho que ligava $x$ a $y$ em $G$, então $P'' = xGv'Pv''y$, pois $v_1$ está 
+em um ciclo em $G$. O mesmo vale para $v_k$, invertendo os rótulos apenas.
+Portanto $v_1$ e $v_k$ são vértices de corte em um grafo não trivial.
+\fimprova
+

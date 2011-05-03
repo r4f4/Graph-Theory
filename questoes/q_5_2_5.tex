@@ -1,5 +1,32 @@
 \quest{5.2.5}
 
+\partQuest{a}
+$(\Leftarrow)$ Seja $\beta = \{B_1, B_2, \ldots , B_k\}$ o conjunto de blocos
+de $G$. Por hipótese temos que $\forall v \in B_i\quad d_{B_i}(v) \equiv 0 (mod$
+$2)$, $i = 1, \ldots, k$. Logo, como $d_G(v) = \sum_{i = 1}^{k} d_{B_i}(v)$, 
+temos que $d_G(v) \equiv 0 (mod$ $2)$, pois é expresso através da soma de 
+parcelas pares.
+
+$(\Rightarrow)$ Seja $G$ um grafo par e $\beta = \{B_1, B_2, \ldots , B_k\}$ 
+o seu conjunto de blocos. Sabemos que todo vértice $V$ não separador está 
+contido em apenas um bloco $B_i \in \beta$, logo, como $\beta$ é uma 
+decomposição de $G$, temos que $d_{B_i}(v) = d_G(v)$ e, portanto $d_{B_i}(v)$ 
+é par. Por absurdo, suponha a existência de um bloco $B_i$ com um vértice 
+separador $v_1$ de grau ímpar. Então, pelo {\bf corolário 1.2} $B_i$ possui,
+pelo menos, mais um vértice ($v_2$) de grau ímpar. Portanto, existe outro
+bloco $B_j$ que contém $v_2$ com grau ímpar, pois sabemos que
+$\sum_{i = 1}^{k} d_{B_i}(v_2) \equiv 0 (mod$ $2)$. Considere então, $B_j$
+o qual contém $v_2$ com grau ímpar. Novamente pelo {\bf corolário 1.2} temos
+que existe um outro vértice de grau ímpar $v_3 \in V(B_j)$. Esse argumento 
+pode ser usado indefinidamente, até que, pelo princípio da casa dos pombos, 
+encontraremos um bloco já visitado na sequência (Spg, $B_i$, $B_j$, \ldots, $B_i$),
+e, como $B_i$ é conexo, temos um ciclo $C = v_1B_iv_2B_jv_3\ldots v_kB_iv_1$
+contido em vários blocos de $\beta$, o que é uma contradição pelo 
+{\bf Teorema 5.3c}. Portanto, não existe vértice separador de grau ímpar, logo
+todo bloco de $\beta$ é par.
+
+\fimprova
+
 \partQuest{b}
 {\bf Sol 1)} $(\Leftarrow)$ Seja $G$ um grafo e $B = \{B_1, \dotsc, B_k\}$ sua
 decomposição em blocos tal que cada bloco é bipartido. Seja $(X_i, Y_i)$ a

@@ -1,6 +1,6 @@
 \quest{5.2.1}
 
-{\bf Sol 1)} Sejam $G$ e $e$ como na hipótese, $G'$ o grafo obtido por
+\noindent {\bf Sol 1)} Sejam $G$ e $e$ como na hipótese, $G'$ o grafo obtido por
 subdividir a aresta $e$ e $v$ o vértice e $e_1$ e $e_2$ as arestas gerados pela
 subdivisão.  Suponha por absurdo que $G'$ seja separável. Sabemos que $e$ e
 $f$, $\forall f \in E(G)$, pertencem a um ciclo em comum. Considere duas
@@ -10,3 +10,18 @@ em comum, então $e_i$ e $h$ também pertencem a $C$. Além do mais, $e_1$ e $e_
 pertencem a $C$.  Portanto, pelo Teorema 5.2, $G'$ é não separável,
 contradizendo nossa suposição.
 
+\noindent {\bf Sol 2)} Primeiramente, podemos assumir que $e$ não é um loop, pois
+se fosse, como $G$ é não separável, temos que $G$ é um $K_1$ com um loop apenas e,
+pelo {\bf Teorema 5.3c}, dividir este loop não o torna separável.
+
+Podemos assumir então que $G$ não contém loops, senão seria separável, logo todo
+vértice não é de corte. Considere então $G'$ que é o grafo $G$ com a aresta 
+$e = xy$ subdividida pelo vértice $v$, gerando duas novas arestas ($e'= xv$ e 
+$e''= vy$). Sejam $a,b \in V(G')$, então existem 2 $ab$-caminhos ($P$ e $P'$)
+internamente disjuntos em $G$. Se nenhum destes caminhos inclui $e$, então o 
+resultado segue pois temos estes mesmos caminhos em $G'$, caso contrário, apenas
+um deles pode usar $e$ e, seja $P = a\ldots xy \ldots b$ o caminho entre $a$ e
+$b$ que usa $e$, temos que $P'' = aPxvyPb$ é um caminho internamente disjunto a
+$P$ e presente em $G'$. Logo, $\forall a,b \in V(G') \exists P,P''$ dois 
+$a,b$-caminhos internamente disjuntos e, portanto, $G'$ é não separável. 
+\fimprova
