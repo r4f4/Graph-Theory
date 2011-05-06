@@ -1,0 +1,17 @@
+\quest{9.1.2}
+
+Primeiramente considere que $G$ e $H$ são completos.
+Neste caso, por serem simples, $\kappa(G) = v(G) - 1$ e $\kappa(H) = v(H) - 1$.
+Pela forma como $G\vee H$ completo, devido a forma como é construído (cada vértice
+já possuia caminho para o seu grafo e em $G \vee H$ terá caminho para todos do 
+outro grafo). Logo $\kappa(G\vee H) = v(G\vee H) - 1 = v(G) + \kappa(H) = v(H) + \kappa(G)$.
+Por outro lado, suponha que $G$ ou $H$ não é completo. Então podemos usar a 
+definição de conexidade pelo corte mínimo, a qual só está definida para $x,y \in G$
+ou $x,y \in H$, pois vértices em grafos diferentes estão ligados. Note que para
+separar dois vértices de $H$ temos que precisamos de um corte de tamanho $c(x,y) + V(G)$ (no mínimo), já que
+para todo vértice em $V$ temos um caminho por ele de $x$ até $y$. Além disto, temos que
+o mínimo desta função vale $\kappa(H) + V(G)$. Para $x,y \in G$ temos, analogamente,
+que o corte mínimo tem cardinalidade $\kappa(G) + V(H)$. Portanto o mínimo é dado por
+$$\kappa(G \vee H) = min\{\kappa(G) + V(H),\kappa(H) + V(G)\}$$
+\fimprova
+
