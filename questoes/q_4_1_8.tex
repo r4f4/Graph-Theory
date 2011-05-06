@@ -39,6 +39,18 @@ D_{T'}(v'_i) \le D_T(v'_i) \le D_{T'}(v'_i) + 1
 Finalmente, temos de \eqref{eq:part1} e \eqref{eq:part2} que
 \[D_T(v'_i) = D_{T'}(v'_i) + 1 \le D_T(v),\] o que é um absurdo pois nesse caso
 $v'_i$ seria centro em $T$.
+\fimprova
+
 
 \partQuest{b}
+Seja $T$ uma árvore com $n$ vértices, $n \ge 3$. Se $T'$ é a árvore obtida a
+partir de $T$ por deletar suas folhas, sabemos que $T$ e $T'$ possuem os mesmos
+centros. Repita este procedimento enquanto $T'$ tiver pelo menos 3 vértices.
+Essa repetição acontecerá um número finito de vezes porque, pela Proposição
+4.2, a cada etapa removemos pelo menos 2 vértices. Seja $T''$ a árvore obtida
+desse processo. Sabemos que $n'' = |V(T'')| \le 2$. Se $n'' = 1$, seu único
+vértice é o centro de $T$. Se não, existem dois vértices $v$ e $u$ e eles são
+adjacentes porque $T$ era árvore e só deletamos vértices (folhas) mas não
+arestas. Da parte (a) obtemos que $u$ e $v$ são centros de $T$.
+\fimprova
 

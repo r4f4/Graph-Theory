@@ -1,0 +1,25 @@
+\quest{9.2.3}
+
+Sejam $C$, $S = \{x_1, x_2, x_3\}$, $G$ e $H$ como na hipótese. Existem três
+casos:
+\begin{description}
+    \item[Caso 1)] A componente $H$ é adjacente aos vértices de $S$ por meio de
+    um vértice $v$. Nesse caso, o resultado segue.
+
+    \item[Caso 2)] A componente $H$ é adjacente aos vértices de $S$ por meio de
+    dois vértices $u$ e $v$. Sem perda de generalidade, suponha $v$ adjacente a
+    $x_1, x_2$ e $u$ adjacente a $x_3$. Como $H$ é conexa, existe árvore
+    geradora $T$ de $H$ e $\exists!vTu$. Desse modo, temos um caminho de
+    tamanho 1 de $v$ para $x_1$, outro de tamanho 1 de $v$ para $x_2$ e e um
+    caminho $vTux_3$ de $v$ a $x_3$. Como esses caminhos são internamente
+    disjuntos entre si, há um 3-fan de $v$ para $S$.
+
+    \item[Caso 3)] A componente $H$ é adjacente aos vértices de $S$ por meio de
+    três vértices $u_1, u_2, u_3$ tal que $u_i$ é vizinho de $x_i$, $1 \le i
+    \le 3$. Novamente, considere a árvore geradora $T$ de $H$. Se $v$ é um
+    ancestral comum de $u_1, u_2$ e $u_3$ em $T$, então os caminhos $vTu_ix_i$,
+    $1 \le i \le 3$, são internamente disjuntos entre si e constituem um 3-fan
+    de $H$ para $S$.
+\end{description}
+\fimprova
+

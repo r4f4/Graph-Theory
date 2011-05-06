@@ -1,0 +1,41 @@
+\quest{9.2.4}
+Na Figura ~\ref{fig:grafoq924} é possível ver que não há ciclo incluindo os
+vértices $\{x_1,y_1,x_2,y_2\}$ nessa ordem porque todo $x_1y_1$-caminho cruza
+todo $x_2y_2$-caminho.
+
+\begin{figure}[htb]
+    \centering
+    \begin{postscript}
+        \MediumPicture\VCDraw{%
+        \begin{VCPicture}{(0,0)(8,8)}
+            \ChgEdgeArrowStyle{-}
+
+            %%%%%%%%%%% vertices %%%%%%%%%%%%%%%%
+            \State[x_1]{(0,8)}{1} \State[x_2]{(8,8)}{2}
+            \State[y_1]{(8,0)}{3} \State[y_2]{(0,0)}{4}
+
+            \FixStateDiameter{0.3cm}
+            \State[]{(4,7)}{5} \State[]{(2,6)}{6} \State[]{(6,6)}{7}
+            \State[]{(1,4)}{8} \State[]{(4,4)}{9} \State[]{(7,4)}{10}
+            \State[]{(2,2)}{11} \State[]{(6,2)}{12} \State[]{(4,1)}{13}
+
+            %%%%%%%%%%% arestas %%%%%%%%%%%%%%%%
+            \EdgeL{1}{2}{} \EdgeL{2}{3}{} \EdgeL{3}{4}{} \EdgeL{1}{4}{}
+            \EdgeL{1}{5}{} \EdgeL{1}{6}{} \EdgeL{1}{8}{}
+            \EdgeL{2}{5}{} \EdgeL{2}{7}{} \EdgeL{2}{10}{}
+            \EdgeL{3}{10}{} \EdgeL{3}{12}{} \EdgeL{3}{13}{}
+            \EdgeL{4}{8}{} \EdgeL{4}{11}{} \EdgeL{4}{13}{}
+            \EdgeL{5}{6}{} \EdgeL{5}{7}{} \EdgeL{5}{8}{} \EdgeL{5}{9}{}
+            \EdgeL{6}{8}{} \EdgeL{6}{9}{} \EdgeL{6}{11}{}
+            \EdgeL{7}{9}{} \EdgeL{7}{10}{} \EdgeL{7}{12}{}
+            \EdgeL{8}{11}{}
+            \EdgeL{9}{11}{} \EdgeL{9}{12}{} \EdgeL{9}{13}{}
+            \EdgeL{10}{12}{} \EdgeL{10}{13}{}
+            \EdgeL{11}{13}{}
+            \EdgeL{12}{13}{}
+        \end{VCPicture}}
+    \end{postscript}
+    \caption{Não há ciclo incluindo $\{x_1,y_1,x_2,y_2\}$ nessa ordem.}
+    \label{fig:grafoq924}
+\end{figure}
+
