@@ -17,31 +17,33 @@ caminho vermelho entre $u_i$ e $v_j$ passando por $x$ e $P_2$ o caminho azul.
 
 \begin{figure}[htb]
     \centering
-    \includegraphics[height=5cm, width=7.67cm]{figuras/graph_q515}
+    %\includegraphics[height=5cm, width=7.67cm]{figuras/graph_q515}
+    \def\svgwidth{7.67cm}
+    \input{figuras/graph2_q515.eps_tex}
     \caption{Ciclos mais longos em $G$}
     \label{fig:ciclos}
 \end{figure}
 
-    \begin{description}
-        \item[Caso 1.1.] Se $i + j < l + 4$:
+\begin{description}
+    \item[Caso 1.1.] Se $i + j < l + 4$:
 
-        então existe ciclo $C'' = P_1 \cup P$ tal que
-        \begin{eqnarray}
-            |C''| &=& l - i + 2 + l - j + 1 + |P| \nonumber \\
-                &\ge& 2l - (i + j) + 4 \nonumber \\
-                &>& 2l - (l + 4) + 4 = l \nonumber
-        \end{eqnarray}
-        é um ciclo mais longo que $C$ e $C'$ em $G$.
+    então existe ciclo $C'' = P_1 \cup P$ tal que
+    \begin{eqnarray}
+        |C''| &=& l - i + 2 + l - j + 1 + |P| \nonumber \\
+            &\ge& 2l - (i + j) + 4 \nonumber \\
+            &>& 2l - (l + 4) + 4 = l \nonumber
+    \end{eqnarray}
+    é um ciclo mais longo que $C$ e $C'$ em $G$.
 
-        \item[Caso 1.2.] Se não, se $i + j \ge l + 4$:
+    \item[Caso 1.2.] Se não, se $i + j \ge l + 4$:
 
-        então existe ciclo $C'' = P_2 \cup P$ tal que
-        \begin{eqnarray}
-            |C''| &=& i + j - 1 + |P| \nonumber \\
-                 &\ge& i + j > l \nonumber
-        \end{eqnarray}
-        é um ciclo mais longo que $C$ e $C'$ em $G$.
-    \end{description}
+    então existe ciclo $C'' = P_2 \cup P$ tal que
+    \begin{eqnarray}
+        |C''| &=& i + j - 1 + |P| \nonumber \\
+             &\ge& i + j > l \nonumber
+    \end{eqnarray}
+    é um ciclo mais longo que $C$ e $C'$ em $G$.
+\end{description}
 
 \item[Caso 2.] Suponha por absurdo que $C$ e $C'$ não tenham nenhum vértice em
 comum. Sejam $s$ e $t$ vértices de $G$ tais que $s \in C$ e $t \in C'$. Porque
