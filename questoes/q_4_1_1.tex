@@ -25,15 +25,20 @@ Logo, temos o seguinte:
 
 Como corolário deste resultado temos a resposta da questão, para o caso em que $F$ é conexa.\\
 
-{\bf Sol 2)} Suponha por absurdo que $T$ seja uma árvore com grau máximo $k$ e
-menos que $k$ folhas. Seja $F$ o conjunto das folhas de $T$. Porque $F$ é um
-conjunto de folhas, $\partial(F) \le k - 1$. Seja $v$ o vértice tal que
-$d(v) = k$. Seja ${\cal P}$  o conjunto de caminhos de $v$ a cada uma das folhas
-de $F$. $|{\cal P}| \le k - 1$ pois $v$ pode ter no máximo $k-1$ caminhos usando
-arestas incidentes distintas. Seja $e$ a aresta não usada por nenhum caminho em
-${\cal P}$ e $u$ o vértice sobre o qual $e$ incide. Sabemos que $u$ não é folha,
-pois caso contrário $e$ estaria em ${\cal P}$. Seja $P_{uf}$ o caminho de $u$ até
-uma folha $f \in F$. Então $P:=vuP_{uf}P_{fv}$ é um ciclo em $T$, o que é absurdo.
+{\bf Sol 2)} Se $T \cong K_2$, então $T$ é tal que $k = 1$ e $T$ tem pelo menos
+uma folha. Se não, suponha por absurdo que $T$ seja uma árvore com grau máximo
+$k$ e menos que $k$ folhas. Seja $F$ o conjunto das folhas de $T$. Porque $F$ é
+um conjunto de folhas, $\partial(F) \le k - 1$. Seja $v$ um vértice tal que
+$d(v) = k$. Seja ${\cal P}$ o conjunto de caminhos de $v$ a cada uma das folhas
+de $F$. Porque $|{\cal P}| = k - 1$, então no máximo $k - 1$ arestas incidentes
+em $v$ podem ser usadas por caminhos em ${\cal P}$. Seja $e$ uma aresta não
+usada por nenhum caminho em ${\cal P}$ e $u \ne v$ o vértice sobre o qual $e$
+incide. Sabemos que $u$ não é folha, pois caso contrário $P := veu$ estaria em
+${\cal P}$. Seja $P_{uf}$ o caminho de $u$ até uma folha $f \in F$ e $x$ o
+vértice de $P_{uf}$ que intersecta algum caminho $P$ de ${\cal P}$. Se $x \not
+\in F$, então $C := vPxP_{uf}uv$ é um ciclo em $T$, o que contraria o fato de
+que $T$ é uma árvore e, portanto, acíclica. Caso contrário, $x = f$ e $C :=
+vPP_{uf}uv$ é um ciclo em $T$, o que é absurdo.
 \fimprova
 
 \partQuest{b} Um conjunto ${\cal P} = \{P_1, P_2, \ldots, P_k\}$, onde $P_i$, $1 \le i \le k$, é um caminho. Além disto, os caminhos são disjuntos nos vértices, exceto pelo vertice inicial $x$, que é comum a todos.
